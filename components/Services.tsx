@@ -21,58 +21,59 @@ import {
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Optimize Short-Form Videos",
+      title: "Elevate Your Short-Form Videos",
       description:
-        "Craft engaging and optimized videos for platforms like Shorts, Reels, and TikTok to reach a broader audience.",
+        "Produce captivating short-form videos tailored for platforms like Shorts, Reels, and TikTok, maximizing engagement and reach.",
       icon: <IconBrandPagekit />,
     },
     {
-      title: "Edutainment",
+      title: "Engaging Edutainment",
       description:
-        "Create informative yet entertaining content that delivers value while keeping your audience hooked.",
+        "Combine education and entertainment to create content that informs and captivates your audience, ensuring they stay engaged.",
       icon: <IconBrandRedux />,
     },
     {
-      title: "Long-Form Videos",
+      title: "Master Long-Form Videos",
       description:
-        "Develop strategies for maintaining viewer retention on longer platforms like YouTube or podcasts.",
+        "Develop strategies to maintain viewer interest and retention on longer formats, including YouTube videos and podcasts.",
       icon: <IconVideo />,
     },
     {
-      title: "Video Explainers",
+      title: "Compelling Video Explainers",
       description:
-        "Simplify complex ideas to educate and entertain your audience through concise and clear explainer videos.",
+        "Transform complex concepts into clear, concise explainer videos that educate your audience while keeping them entertained.",
       icon: <IconLighter />,
     },
     {
-      title: "Product Demos",
+      title: "Dynamic Product Demos",
       description:
-        "Showcase your product's features in dynamic videos that convert viewers into customers.",
+        "Showcase your products in action with dynamic videos designed to convert viewers into loyal customers.",
       icon: <IconPackage />,
     },
     {
-      title: "Motion Graphics",
+      title: "Stunning Motion Graphics",
       description:
-        "Elevate your brand with engaging animations and dynamic motion graphics.",
+        "Enhance your brand's storytelling with engaging animations and dynamic motion graphics that capture attention.",
       icon: <IconBadge3dFilled />,
     },
     {
-      title: "Ads",
+      title: "Impactful Ads",
       description:
-        "Create attention-grabbing promotional videos that drive engagement and sales.",
+        "Create eye-catching promotional videos that drive engagement, boost visibility, and increase sales.",
       icon: <IconAd />,
     },
     {
-      title: "Launch Videos",
+      title: "Memorable Launch Videos",
       description:
-        "Produce impactful launch videos to introduce your brand in a memorable and original way.",
+        "Craft powerful launch videos that introduce your brand in a unique and unforgettable way, making a lasting impression.",
       icon: <IconRocket />,
     },
   ];
+  
 
   return (
     <section className="relative z-10 py-10 max-w-7xl mx-auto">
-      <h2 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-16 bg-opacity-50">Transform Your Brand</h2>
+      <h2 className="text-5xl md:text-8xl font-bold text-center bg-clip-text text-white text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-16 bg-opacity-50">What We Do</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature, index) => (
           <Feature key={feature.title} {...feature} index={index} />

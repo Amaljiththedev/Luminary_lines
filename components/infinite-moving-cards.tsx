@@ -12,8 +12,8 @@ export const InfiniteMovingCards = ({
 }: {
   items: {
     name: string;
-    avatar: string;
-    profileUrl: string; // Added profileUrl property
+    avatar: string; // Image URL
+    profileUrl: string; // Profile link
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -63,13 +63,13 @@ export const InfiniteMovingCards = ({
           duration = "15s";
           break;
         case "normal":
-          duration = "15s";
+          duration = "20s"; // Adjusted for a better experience
           break;
         case "slow":
           duration = "25s";
           break;
         default:
-          duration = "15s"; // Default to normal
+          duration = "20s"; // Default to normal
       }
       containerRef.current.style.setProperty("--animation-duration", duration);
     }
@@ -97,15 +97,17 @@ export const InfiniteMovingCards = ({
             key={item.name}
           >
             <a
-              href={item.profileUrl} // Added profile link
+              href={item.profileUrl} // Profile link
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-row items-center"
             >
               <img
-                src={item.avatar}
+                srcSet={`${item.avatar}?w=40 40w, ${item.avatar}?w=80 80w`} // Responsive image sources
+                sizes="(max-width: 40px) 40px, (max-width: 80px) 80px" // Image size for different screens
                 alt={`Avatar of ${item.name}`}
                 className="w-10 h-10 rounded-full mr-3"
+                loading="lazy" // Lazy loading for images
               />
               <span className="relative z-20 text-base leading-[1.5] text-white font-normal truncate">
                 {item.name}

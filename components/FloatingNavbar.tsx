@@ -77,13 +77,22 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-base font-medium relativeborder-neutral-200 dark:border-white/[0.2] text-white dark:text-white px-4 py-2 rounded-full">
-        <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-            alt="WhatsApp Icon" 
-            className="w-5 h-5 md:w-6 md:h-6" 
+        <button className="">
+        <div className="flex justify-center">
+          <a
+            href="https://wa.me/918089660028" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center h-10 rounded-full border border-green-500 bg-green-500 text-white px-4 font-medium transition-colors hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+          >
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+              alt="WhatsApp Icon" 
+              className="w-4 h-4 md:w-5 md:h-5 " // Adjust icon size
             />
-            <a href="https://wa.me/"></a>
+           
+          </a>
+        </div>
              
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-200 to-transparent  h-px" />
         </button>

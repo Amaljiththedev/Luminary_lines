@@ -85,7 +85,7 @@ export const BackgroundBeams = React.memo(
               key={`path-` + index}
               d={path}
               stroke={`url(#linearGradient-${index})`}
-              strokeOpacity="0.4"
+              strokeOpacity="2"
               strokeWidth="1"
             ></motion.path>
           ))}

@@ -1,21 +1,25 @@
+
+
+"use client";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(0, 0, 40)", // Black
   gradientBackgroundEnd = "rgb(0, 0, 0)",   // Black
-  firstColor = "0, 51, 51",                  // Very dark cyan
-  secondColor = "0, 101, 102",                // Dark blue
-  thirdColor = "0, 36, 76",                  // Darker blue
-  fourthColor = "0, 26, 51",                 // Much darker blue
-  fifthColor = "0, 0, 100",                   // Very dark navy
-  pointerColor = "0, 20, 51",               // Light blue
+  firstColor = "135, 206, 235",             // SkyBlue
+  secondColor = "70, 130, 180",              // SteelBlue
+  thirdColor = "30, 144, 255",               // DodgerBlue
+  fourthColor = "70, 130, 180",              // SteelBlue
+  fifthColor = "0, 0, 139",                  // DarkBlue
+  pointerColor = "0, 255, 255",              // Cyan
   size = "80%",
   blendingValue = "hard-light",
   children,
   className,
   interactive = true,
   containerClassName,
+
 }: {
   gradientBackgroundStart?: string;
   gradientBackgroundEnd?: string;
@@ -38,7 +42,6 @@ export const BackgroundGradientAnimation = ({
   const [curY, setCurY] = useState(0);
   const [tgX, setTgX] = useState(0);
   const [tgY, setTgY] = useState(0);
-
   useEffect(() => {
     document.body.style.setProperty(
       "--gradient-background-start",
@@ -63,9 +66,11 @@ export const BackgroundGradientAnimation = ({
       if (!interactiveRef.current) {
         return;
       }
-      setCurX(curX + (tgX - curX) / 10); // Faster
-      setCurY(curY + (tgY - curY) / 10); // Faster
-      interactiveRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+      setCurX(curX + (tgX - curX) / 20);
+      setCurY(curY + (tgY - curY) / 20);
+      interactiveRef.current.style.transform = `translate(${Math.round(
+        curX
+      )}px, ${Math.round(curY)}px)`;
     }
 
     move();
@@ -87,14 +92,18 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        "h-screen w-full overflow-hidden top-0 left-0 bg-[linear-gradient(-140deg,var(--gradient-background-start),var(--gradient-background-end))]", // Change angle here
+        "h-screen w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName
       )}
     >
       <svg className="hidden">
         <defs>
           <filter id="blurMe">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
             <feColorMatrix
               in="blur"
               mode="matrix"
@@ -112,13 +121,12 @@ export const BackgroundGradientAnimation = ({
           isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(40px)]"
         )}
       >
-        {/* Adjust the animation classes as needed to make them faster */}
         <div
           className={cn(
             `absolute [background:radial-gradient(circle_at_center,_var(--first-color)_0,_var(--first-color)_50%)_no-repeat]`,
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:center_center]`,
-            `animate-first`, // Ensure CSS animations are adjusted for speed
+            `animate-first`,
             `opacity-100`
           )}
         ></div>
@@ -146,7 +154,7 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:calc(50%-200px)]`,
             `animate-fourth`,
-            `opacity-100`
+            `opacity-70`
           )}
         ></div>
         <div
@@ -166,7 +174,7 @@ export const BackgroundGradientAnimation = ({
             className={cn(
               `absolute [background:radial-gradient(circle_at_center,_rgba(var(--pointer-color),_0.8)_0,_rgba(var(--pointer-color),_0)_50%)_no-repeat]`,
               `[mix-blend-mode:var(--blending-value)] w-full h-full -top-1/2 -left-1/2`,
-              `opacity-100`
+              `opacity-70`
             )}
           ></div>
         )}

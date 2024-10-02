@@ -21,20 +21,17 @@ export const description = "An interactive bar chart"
 
 // Updated chartData to reflect monthly data for all 12 months
 const chartData = [
-  { month: "January", views: 123456 + 654321 + 234567 },
-  { month: "February", views: 345678 + 765432 + 876543 },
-  { month: "March", views: 456789 + 876543 + 567890 },
-  { month: "April", views: 567890 + 987654 + 678901 },
-  { month: "May", views: 2678901 + 2543210 + 2789012 },
-  { month: "June", views: 789012 + 432109 + 890123 },
-  { month: "July", views: 890123 + 321098 + 901234 },
-  { month: "August", views: 901234 + 210987 + 123456 },
-  { month: "September", views: 123456 + 654321 + 234567 },
-  { month: "October", views: 234567 + 765432 + 876543 },
-  // { month: "November", views: 345678 + 876543 + 567890 },  // Added November
-  // { month: "December", views: 456789 + 987654 + 678901 },  // Added December
+  { month: "January", views: 20123456 },
+  { month: "February", views: 18987654 },
+  { month: "March", views: 21567890 },
+  { month: "April", views: 21000000 },
+  { month: "May", views: 19345678 },
+  { month: "June", views: 19876543 },
+  { month: "July", views: 20567890 },
+  { month: "August", views: 19765432 },
+  { month: "September", views: 20000000 },
+  { month: "October", views: 21123456 }, // This month may be adjusted
 ]
-
 const chartConfig = {
   Views: {
     label: "Views",

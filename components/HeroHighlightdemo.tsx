@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./hero-highlight";
 import { useEffect, useState } from "react";
 import { InfiniteMovingCardsDemo } from "./Movingcard";
+import React from "react";
 
 export function HeroHighlightDemo({ scrollToBackgroundGradient }: { scrollToBackgroundGradient: () => void }) {
   const [shouldAnimate, setShouldAnimate] = useState(false);
@@ -15,7 +16,7 @@ export function HeroHighlightDemo({ scrollToBackgroundGradient }: { scrollToBack
 
   return (
   <>
-    <div className="h-[80vh] flex flex-col items-center justify-center bg-transparent px-4 md:px-8 lg:px-16 mt-24 lg:mt-36">
+    <div className="h-[80vh] flex flex-col items-center justify-center bg-transparent px-4 md:px-8 lg:px-16 mt-44 lg:mt-44">
       {/* Button container */}
       <div className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl mt-16 sm:mt-20 lg:mt-36 mb-8 sm:mb-10 lg:mb-12 shadow-zinc-900 rounded-full p-px text-xs font-sans leading-6 text-white inline-block">
         <span className="absolute inset-0 overflow-hidden rounded-full">
@@ -33,7 +34,7 @@ export function HeroHighlightDemo({ scrollToBackgroundGradient }: { scrollToBack
           initial={{ opacity: 0, y: 20 }}
           animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-sans font-bold text-white max-w-4xl lg:leading-snug text-center mx-auto mb-4 sm:mb-6"
+          className="text-7xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl font-sans font-bold text-white max-w-4xl lg:leading-snug text-center mx-auto mb-4 sm:mb-6"
           style={{ willChange: "opacity, transform", fontFamily: "Helvetica, sans-serif" }}
         >
           <Highlight className="text-white">Ignite Vision</Highlight>

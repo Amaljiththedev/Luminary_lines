@@ -140,3 +140,12 @@ body {
   }
   
 }
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+.scroll-container {
+  position: relative; /* or fixed, or absolute depending on your layout */
+  overflow-y: auto;  /* if you want to enable scrolling */
+  height: 100vh;     /* set a height for scrolling to be necessary */
+}

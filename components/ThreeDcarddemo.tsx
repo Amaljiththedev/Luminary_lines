@@ -7,7 +7,7 @@ import { IconSpeakerphone, IconVolume3 } from "@tabler/icons-react";
 export function ThreeDCardDemo() {
   const [isMuted, setIsMuted] = useState(true); // State to handle mute/unmute
   const videoRef = useRef(null); // Reference to store video element
-
+  
   // Toggle mute state
   const toggleMute = () => {
     setIsMuted((prev) => {

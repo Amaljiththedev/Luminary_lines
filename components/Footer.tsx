@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { HeroHighlight } from "./hero-highlight";
 import { motion } from 'framer-motion';
-import { IconBrandInstagram, IconBrandFacebook, IconBrandTwitter, IconBrandLinkedin, IconBrandWhatsapp, IconMail } from '@tabler/icons-react';
+import { IconBrandInstagram, IconBrandFacebook, IconBrandTwitter, IconBrandLinkedin, IconBrandWhatsapp, IconMail, IconBrandYoutube } from '@tabler/icons-react';
 
 const Footer = ({ scrollToBackgroundGradient }: { scrollToBackgroundGradient: () => void }) => {
   const [shouldAnimate, setShouldAnimate] = useState(false);
@@ -45,7 +45,7 @@ const Footer = ({ scrollToBackgroundGradient }: { scrollToBackgroundGradient: ()
         {/* WhatsApp Button */}
         <div className="flex justify-center">
           <a
-            href="https://wa.me/1234567890" // Replace with your WhatsApp number
+            href="https://wa.me/918089660028" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-12 items-center justify-center rounded-2xl border border-green-500 bg-green-500 text-white px-6 font-medium transition-colors hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-50"
@@ -69,16 +69,16 @@ const Footer = ({ scrollToBackgroundGradient }: { scrollToBackgroundGradient: ()
 
           {/* Social Media Icons */}
           <div className="flex space-x-2">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href="https://www.instagram.com/luminarylines" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <IconBrandInstagram size={32} />
             </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href="https://www.facebook.com/luminarylines" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <IconBrandFacebook size={32} />
             </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href="https://x.com/luminarylines" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <IconBrandTwitter size={32} />
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href="https://www.linkedin.com/in/luminarylines/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <IconBrandLinkedin size={32} />
             </a>
           </div>
@@ -95,7 +95,7 @@ const Footer = ({ scrollToBackgroundGradient }: { scrollToBackgroundGradient: ()
         <div className="flex justify-between items-center mt-4">
           {/* Contact Info */}
           <div className="text-gray-500 text-sm flex">
-            <IconMail/><p> </p><a href="mailto:hello@luminarylines.com" className="text-white underline">luminarylines@email.com</a>
+            <IconMail/><p> </p><a href="mailto:hello@luminarylines.com" className="text-white underline">hello@luminarylines.com</a>
           </div>
 
           <div className="flex space-x-3 text-gray-500 text-xs">

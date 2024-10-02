@@ -37,7 +37,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 text-center">
-      <h2 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent text-white from-neutral-50 to-neutral-400 bg-opacity-50 mt-36 -mb-30 md:mt-0 ">Project Overflow</h2>
+      <h2 className="text-5xl md:text-8xl font-bold text-center bg-clip-text text-transparent text-white from-neutral-50 to-neutral-400 bg-opacity-50 mt-36 -mb-30 md:mt-0 ">Project Overflow</h2>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
